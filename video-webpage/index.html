@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme YouTube Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark text-light">
+    <div class="noise-overlay"></div>
+    <div class="container py-4">
+        <!-- Header -->
+        <header class="mb-5">
+            <div class="text-center mb-4">
+                <h1 class="display-4 fw-bold gradient-text">Video Gallery</h1>
+                <p class="lead ">Discover amazing content</p>
+            </div>
+        </header>
+
+        <!-- Carousel Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div id="mainCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner rounded-4 glass-effect">
+                        <div class="carousel-item active">
+                            <img src="https://imgs.search.brave.com/BDWi26ytLt7znbsepFvgF1OLupSl7lBlvJAgV3gUF9E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kZXNp/Z253aXphcmQuY29t/L2Jsb2cvaG93LXRv/LW1ha2UtYS10aHVt/Ym5haWwvcmVzaXpl/LzNjNjkzOWQwLTk5/MjktMTFlYi04ODEx/LWNiNWEwYzMzZTFh/ZC0xJTIwKDEpXzE2/NTA1Mjg4NjQ5MDRf/cmVzaXplLmpwZw"
+                                class="d-block w-100" alt="Featured Video 1">
+                            <div class="carousel-overlay"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://imgs.search.brave.com/D8wXp1ZiKjfdVekP2MxiQ48qKSNTtb0a-DzGu3HD3uc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aHVic3BvdC5jb20v/aHMtZnMvaHViZnMv/WW91VHViZS1UaHVt/Ym5haWwtRXhhbXBs/ZS1qcGcuanBlZz93/aWR0aD00ODEmbmFt/ZT1Zb3VUdWJlLVRo/dW1ibmFpbC1FeGFt/cGxlLWpwZy5qcGVn"
+                                class="d-block w-100" alt="Featured Video 2">
+                            <div class="carousel-overlay"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://imgs.search.brave.com/N_kLFIOuh6ulL1mmdAhzuY0FdOIUdAfIDIdrK7f3iO4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFHU1VT/NkI5LXcvNC8wLzE2/MDB3L2NhbnZhLWJy/b3duLXBob3RvY2Vu/dHJpYy1pbnNwaXJh/dGlvbmFsLXlvdXR1/YmUtdGh1bWJuYWls/LUpWWEw1eFVLMFl3/LmpwZw"
+                                class="d-block w-100" alt="Featured Video 3">
+                            <div class="carousel-overlay"></div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- YouTube Cards Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="section-title mb-4">
+                    <h2><span class="gradient-text">Featured Videos</span></h2>
+                </div>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card glass-card h-100">
+                            <div class="card-img-container">
+                                <img src="https://i.ytimg.com/vi/foGklduxhM0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCPi7XBrX92JCDY5UJSs09NJP8jzA"
+                                    class="card-img-top" alt="YouTube Thumbnail">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Fast API</h5>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.youtube.com/watch?v=foGklduxhM0" target="_blank" class="btn btn-glow w-100 watch-now-btn">
+                                    <i class="fas fa-play-circle me-2"></i>watch now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card glass-card h-100">
+                            <div class="card-img-container">
+                                <img src="https://i.ytimg.com/vi/iSNvKaVtwTU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCvj8yIbKfQUm6s7muGAf68OkOr1w"
+                                    class="card-img-top" alt="YouTube Thumbnail">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">This Video should not exist!</h5>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.youtube.com/watch?v=iSNvKaVtwTU" target="_blank" class="btn btn-glow w-100 watch-now-btn">
+                                    <i class="fas fa-play-circle me-2"></i>watch now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card glass-card h-100">
+                            <div class="card-img-container">
+                                <img src="https://i.ytimg.com/vi/HbNfCM4ilBQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBx5YnbCwhVrXyVsrM1oKIBb0UAZQ"
+                                    class="card-img-top" alt="YouTube Thumbnail">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Logic?</h5>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.youtube.com/watch?v=HbNfCM4ilBQ" target="_blank" class="btn btn-glow w-100 watch-now-btn">
+                                    <i class="fas fa-play-circle me-2"></i>watch now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="glass-effect rounded-4 p-3 text-center">
+                        <p class="mb-0">
+                            <i class="far fa-copyright me-1"></i> copyright - <span
+                                class="gradient-text fw-bold">code-wtih-affu</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
