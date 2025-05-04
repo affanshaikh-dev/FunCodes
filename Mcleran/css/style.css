@@ -1,0 +1,342 @@
+/* universal styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Funnel Display", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+.button {
+    padding: 10px 20px;
+    background: #e54b4b;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 50px;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+.button:hover {
+    background: #b93737;
+}
+
+/* header styling ****************************** */
+.header {
+    background-color: rgba(0, 0, 0, 0.712);
+    color: #fff;
+    padding: .8em 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.header .logo img {
+    width: 150px;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* hero section styling ****************************** */
+.heroSection {
+    background: url('../img/bg-hero.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.heroSection .heroContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.heroSection .heroContent .heroDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.heroSection .heroContent h1 {
+    font-size: 4em;
+}
+
+.heroSection .heroContent h1 span,
+.aboutDetials h2 span {
+    color: #e54b4b;
+}
+
+.heroSection .heroContent p {
+    font-size: 1.1em;
+}
+
+/* about section styling ****************************** */
+.aboutSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 3em;
+}
+
+.aboutDetials {
+    padding: 40px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.aboutSection h2 {
+    font-size: 1.3em;
+    flex: 1 1 200px;
+    color: #0A0A0A;
+}
+
+.aboutSection p {
+    flex: 1 1 32em;
+    font-size: 1.7em;
+    color: #535353;
+}
+
+.aboutSection p strong {
+    color: #333;
+}
+
+/* car section styling ****************************** */
+.carsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 3.5em 3em;
+    background: #121212;
+    color: #fff;
+    border-radius: 20px;
+    margin: 0 15px;
+}
+
+.carsSection .carsTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 1.3em;
+    gap: 3px;
+}
+
+.carsSection .carsTitle h2 {
+    font-size: 2.8em;
+}
+
+.carsSection .carsTitle p {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.carsSection figure {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.carsSection .carItems {
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.carsSection figure:hover img {
+    transform: scale(1.1);
+} 
+
+.carsSection figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.carsSection .carItems .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.432);
+    padding: 20px;
+}
+
+.carsSection .carItems .overlay h3 {
+    font-size: 1.4em;
+}
+
+.carsSection .carItems .overlay a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+.carsSection .carItems .overlay a:hover {
+    background: rgba(255, 255, 255, 0.103);
+}
+
+/* contact section styling  */
+.contactSection {
+    padding: 2em 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactSection h3 {
+    font-size: 4em;
+}
+
+.contactSection h3 span {
+    color: #e54b4b;
+}
+
+.contactSection p {
+    font-size: 2.2em;
+}
+
+.contactSection p input {
+    padding: 5px;
+    font-size: 0.8em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+}
+
+.contactSection p input::placeholder {
+    color: #ccc;
+}
+
+.contactSection p input[type="number"]::-webkit-outer-spin-button,
+.contactSection p input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.contactSection form button {
+    padding: 10px 15px;
+    font-size: 1.1em;
+    border: none;
+    background: #0A0A0A;
+    color: #fff;
+    margin: 15px 0 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* footer section styling */
+.footer {
+    background-color: #0A0A0A;
+    color: #fff;
+    padding: 3.5em 3em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    border-radius: 50px 50px 0 0;
+}
+
+.footer .logoDescription {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .logoDescription figure {
+    max-width: 20em;
+}
+
+.footer .logoDescription figure img {
+    width: 100%;
+}
+
+.footer .logoDescription p {
+    font-size: 1.1em;
+    max-width: 40%;
+}
+
+.footer .footerDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .footerDetails p {
+    font-size: 1.1em;
+}
+
+.footer .footerDetails p span {
+    color: #e54b4b;
+}
+
+.footer .footerDetails .socialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer .footerDetails .socialIcon a {
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #0A0A0A;
+    transition: .3s ease-in-out;
+}
+
+.footer .footerDetails .socialIcon a i {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footerDetails .socialIcon a:hover {
+    background: #e54b4b;
+    color: #fff;
+}

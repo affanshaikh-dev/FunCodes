@@ -1,0 +1,25 @@
+/* Header Section styling */
+.sheader {
+    position: relative;
+    width: 98.5%;
+    margin: 10px;
+    background: #0A0A0A;
+    border-radius: 50px;
+}
+
+/* sHero Section Styling */
+.sHeroSection {
+    height: 40vh;
+}
+
+/* Details Section Styling */
+.detailsSection {
+    padding: 2em 3em .6em;
+    font-size: 1.4em;
+}
+
+.detailsSection .contentDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
