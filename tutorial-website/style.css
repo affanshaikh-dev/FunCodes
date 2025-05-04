@@ -1,0 +1,725 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+:root {
+    --pri: #c1520f;
+    --middark: #9b4109;
+    --dark: #803405;
+    --gray: rgba(136, 135, 135, 0.651);
+    --black: #000000;
+    --lblack: #333;
+    --white: #fff;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #FFFDFB;
+    overflow-x: hidden;
+    font-size: 100%;
+}
+
+/* Navbar Styling Start ****************************** */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3.3%;
+    background-color: #fff;
+}
+
+.navbar .navbarLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #c1520f;
+}
+
+.navLinks .resLogo {
+    display: none;
+}
+
+.navbar .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.navbar .navLinks a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+    font-weight: 600;
+    padding: 25px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar .navLinks a:hover {
+    color: var(--primary);
+}
+
+/* Navbar dropdown Styling ****************************** */
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid var(--middark);
+    list-style: none;
+    min-width: 200px;
+    padding: 8px 0;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.navbar .dropdownMenu li {
+    padding: 10px 15px;
+}
+
+.navbar .dropdownMenu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+    transition: color 0.3s ease;
+    padding: 0;
+}
+
+.navbar .navLinks a:hover {
+    color: var(--pri);
+}
+
+.navbar .dropdownMenu li:hover a {
+    color: #c1520f;
+}
+
+.navbar .dropdown:hover .dropdownMenu {
+    display: block;
+}
+
+/* Navbar Btn Styling ****************************** */
+.navbar .navButtons {
+    display: flex;
+    gap: 15px;
+}
+
+/* navBtn Styling ****************************** */
+.navbar .humberger {
+    width: 35px;
+    height: 35px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.navbar.active .humberger {
+    transform: rotate(360deg);
+}
+
+.navbar .humberger span {
+    width: 70%;
+    height: 1px;
+    background: var(--dark);
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.navbar .humberger span.line1 {
+    transform: translateY(-3px);
+}
+
+.navbar.active .humberger span.line1 {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.navbar .humberger span.line2 {
+    transform: translateY(3px);
+}
+
+.navbar.active .humberger span.line2 {
+    transform: translateY(0px) rotate(45deg);
+}
+
+/* Navbar Styling End ****************************** */
+
+/* Main Styling Start ****************************** */
+.main {
+    display: block;
+    padding: 0 3.3%;
+}
+
+/* Hero Styling Start ******************* */
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heroSection figure #heroVideo {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+    border-radius: 25px;
+    pointer-events: none;
+}
+
+#youtubeVideo:hover {
+    pointer-events: auto;
+}
+
+.heroSection .detailsHero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    flex: 1 1 50%;
+}
+
+.heroSection .detailsHero h1 {
+    font-size: 4em;
+    line-height: 96%;
+    padding: 0 0 8px;
+    font-weight: 900;
+    max-width: 80%;
+}
+
+.heroSection .detailsHero h1 span {
+    color: var(--pri);
+}
+
+.heroSection .detailsHero p {
+    font-size: 1.2em;
+    max-width: 65%;
+    color: var(--lblack);
+}
+
+.heroSection .detailsBtns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex: 1 1 40%;
+    width: 100%;
+}
+
+/* Hero Styling End ******************* */
+
+/* counter Styling start ******************* */
+.main .counterSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 35px 0;
+}
+
+.main .counterSection .counterMain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    width: 100%;
+    padding: 30px 15px;
+    background: var(--pri);
+    border-radius: 8px;
+    position: relative;
+    z-index: -1;
+}
+
+.main .counterSection .counterMain .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 200px;
+    width: 100%;
+    color: var(--white);
+    gap: 3px;
+    padding: 5px;
+    text-align: center;
+}
+
+.main .counterSection .counterMain .counter h1 {
+    font-size: 3em;
+}
+
+.main .counterSection .counterMain .counter p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* counter Styling End ******************* */
+
+/* courses Styling start ******************* */
+.coursesSection {
+    display: block;
+    position: relative;
+    padding: 0 0 25px;
+}
+
+/* courses header styling */
+.coursesSection .coursesHeader {
+    padding: 15px 0 30px;
+}
+
+/* courses box styling */
+.cdBoxes {
+    cursor: pointer;
+}
+
+.cdBoxes {
+    width: 100%;
+}
+
+.cdBoxes .cdBox {
+    user-select: none;
+}
+
+.cdBoxes .cdBox {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid var(--gray);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.coursesDetails .cdBox figure {
+    width: 100%;
+    height: auto;
+}
+
+.coursesDetails .cdBox figure img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.coursesDetails .cdBox h3 {
+    font-size: 1.5em;
+    color: var(--pri);
+    font-weight: 700;
+}
+
+.coursesDetails .cdBox p {
+    color: var(--lblack);
+    font-size: .95em;
+}
+
+.coursesDetails .cdBox .cdBoxBtn {
+    padding: 10px 0;
+}
+
+/* courses Styling end ******************* */
+
+/* About Us Styling start ******************* */
+.aboutUsSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0 30px;
+}
+
+.aboutUsSection .aboutContent,
+.aboutUsSection .aboutImage {
+    flex: 1 1 350px;
+}
+
+.aboutUsSection .aboutContent {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.aboutUsSection .aboutContent p {
+    color: var(--lblack);
+    font-size: 1.05em;
+}
+
+.aboutUsSection .aboutImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* About Us Styling end ******************* */
+
+/* Highlight Styling start ******************* */
+.highlightSection {
+    padding: 25px 0;
+}
+
+.highlightSection .highlightHeader {
+    padding: 10px 0 25px;
+}
+
+.highlightSection .mySwiper {
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.highlightSection .slideImage {
+    width: 100%;
+    height: 65vh;
+    cursor: pointer;
+}
+
+.highlightSection .slideImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup,
+.glPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: .3s ease-in;
+}
+
+
+#popupImage,
+#glPopupImage {
+    max-width: 80%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.closeBtn,
+.glCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Highlight Styling end ******************* */
+
+/* Gallery Styling start ******************* */
+.gallerySection {
+    display: block;
+    padding: 30px 0;
+}
+
+.galleryImages {
+    width: 100%;
+    padding: 25px 0;
+}
+
+.galleryImages .imagesSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    gap: 15px;
+}
+
+.imagesSection .imgGal {
+    width: 100%;
+    max-height: 290px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.imagesSection .img1 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.imagesSection .img2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.imagesSection .img3 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.imagesSection .img4 {
+    grid-area: 2 / 3 / 3 / 5;
+}
+
+.imagesSection .img5 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.imagesSection .img6 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+/* Gallery Styling end ******************* */
+
+/* CTA Styling start ******************* */
+.ctaSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 0;
+    border-radius: 20px;
+    background: url(assets/cta-imperial-tutorial-govandi.png) 100% 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateY(-20px);
+}
+
+.ctaSection .ctaContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 0 0 20px;
+}
+
+.ctaSection .ctaContent h3 {
+    font-size: 2.7em;
+    color: var(--white);
+    max-width: 78%;
+    text-align: center;
+    line-height: 110%;
+}
+
+.ctaSection .ctaContent h3 span {
+    color: var(--pri);
+}
+
+.ctaSection .ctaContent p {
+    color: var(--white);
+    font-size: 1.1em;
+    max-width: 50%;
+    text-align: center;
+}
+
+.ctaSection .ctaBtns {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* CTA Styling end ************************** */
+
+/* Testimonial Styling start ************************** */
+.testimonialSection {
+    padding: 35px 0;
+}
+
+.tesBoxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    gap: 15px;
+}
+
+.tesBox {
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 250px;
+    gap: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.tesBoxes .tesBox i {
+    font-size: 3.5em;
+    color: var(--pri);
+}
+
+.tesBoxes .tesBox p {
+    color: #333;
+}
+
+.tesBoxes .tesBox .tesDetails {
+    padding: 0 0 10px;
+    border-left: 10px solid var(--pri);
+    padding-left: 15px;
+}
+
+.tesBoxes .tesBox .tesDetails h4 {
+    font-family: 1.3em;
+}
+
+.tesBoxes .tesBox .tesDetails p.tesYrs {
+    font-size: .85em;
+}
+
+/* Testimonial Styling end ************************** */
+/* Main Styling Start ****************************** */
+
+/* Footer Styling Start **************************** */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    background: rgb(19, 19, 19);
+    padding: 50px 40px 0;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+}
+
+.footer h2 {
+    font-size: 1.8em;
+    max-width: 50%;
+    text-align: center;
+    color: var(--white);
+}
+
+.footer form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer form .input {
+    max-width: 25%;
+    width: 100%;
+    padding: 15px 35px 15px 20px;
+    font-size: 1em;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+.footer .selectBox {
+    width: 100%;
+    max-width: 23%;
+    position: relative;
+}
+
+.footer #course_option {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    appearance: none;
+    outline: none;
+    position: relative;
+    font-size: 1em;
+    color: var(--lblack);
+}
+
+.footer .selectBox::after {
+    content: '';
+    position: absolute; 
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid var(--lblack);
+    border-bottom: 1px solid var(--lblack);
+    right: 25px;
+    top: 40%;
+    transform: rotate(313deg);
+}
+
+.footer .footBtn {
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: none;
+    max-width: 15%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.footer .credits {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0 25px;
+    color: var(--white);
+}
+
+.footer .credits .socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer .credits .socialIcons a {
+    text-decoration: none;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+.footer .credits .socialIcons a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lblack);
+}
+
+.footer .credits .socialIcons a:hover {
+    background: var(--pri);
+}
+
+.footer .credits .socialIcons a:hover i {
+    color: var(--white);
+}
+/* Footer Styling End ****************************** */
