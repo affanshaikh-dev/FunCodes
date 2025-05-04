@@ -1,0 +1,1299 @@
+/* --- universal css code --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --green: #8FC240;
+    --dgreen: #76a62d;
+    --blue: #074c7d;
+    --lblue: #0b83d8;
+    --orange: #F6911E;
+    --white: #FFF;
+    --black: #000;
+    --lblack: #616161;
+    --elblack: #f1f1f1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--elblack);
+    font-size: 98%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scrollAni {
+    animation: 1s appear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+/* --- universal css code --- */
+
+/* --- header section start --- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5em 5.5em;
+}
+
+/* header image css code */
+.header figure {
+    max-width: 250px;
+    width: 100%;
+}
+
+.header figure img {
+    width: 100%;
+}
+
+/* header navigation css code */
+.header .navigationBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+}
+
+.header .navigationBar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.header .navigationBar ul li {
+    list-style: none;
+    position: relative;
+}
+
+.header .navigationBar ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--lblack);
+    font-size: 1rem;
+    font-weight: 300;
+    position: relative;
+    transition: all .3s linear;
+}
+
+.header .navigationBar ul li a:hover {
+    font-weight: 500;
+    color: var(--lblue);
+}
+
+.header .navigationBar ul li a::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--lblue);
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.header .navigationBar ul li a:hover::before {
+    opacity: 1;
+}
+
+.header .navigationBar>a {
+    padding: 10px 18px;
+    background: var(--lblue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 5px;
+    transition: .3s linear;
+}
+
+.header .navigationBar>a:hover {
+    background: var(--orange);
+}
+
+/* humburger css code */
+.header .humberger {
+    width: 45px;
+    height: 45px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.header.active .humberger {
+    transform: rotate(360deg);
+}
+
+.header .humberger span {
+    width: 70%;
+    height: 1px;
+    background: var(--black);
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.header .humberger span.line1 {
+    transform: translateY(-3px);
+}
+
+.header.active .humberger span.line1 {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.header .humberger span.line2 {
+    transform: translateY(3px);
+}
+
+.header.active .humberger span.line2 {
+    transform: translateY(0px) rotate(45deg);
+}
+
+/* --- header section end --- */
+
+/* --- main container start --- */
+.main {
+    display: block;
+    position: relative;
+    padding: 0 5.5em;
+    background: var(--elblack);
+}
+
+/* --- hero section start --- */
+.main .heroSection {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 65vh;
+    background: url(img/web_solutions_mumbai.png) 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 30px 45px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.main .heroSection div {
+    flex: 1 1 350px;
+}
+
+.main .heroSection .contentHero {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--elblack);
+    flex: 1 1 450px;
+}
+
+.main .heroSection .whiteSpaceH {
+    flex: 1 1 200px;
+}
+
+.main .heroSection .contentHero h1 {
+    font-size: 2.4em;
+    line-height: 105%;
+}
+
+.main .heroSection .contentHero h1 strong {
+    font-family: "IBM Plex Mono", monospace;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.main .heroSection .contentHero h1 strong::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    background: var(--green);
+    bottom: 0;
+    left: 0;
+    opacity: .5;
+    z-index: -1;
+}
+
+.main .heroSection .contentHero p {
+    font-size: 0.95em;
+}
+
+.main .heroSection .contentHero a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: var(--lblue);
+    border-radius: 50px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.main .heroSection .contentHero a::before {
+    content: "";
+    position: absolute;
+    background: var(--green);
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0 0 80% 80%;
+    transition: .3s ease-in-out;
+}
+
+.main .heroSection .contentHero a:hover::before {
+    height: 100%;
+    border-radius: 0;
+}
+
+/* --- hero section end --- */
+
+/* --- counter section start --- */
+.main .counterSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    transform: translateY(-55px);
+}
+
+.main .counterSection .counterMain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 94%;
+    width: 100%;
+    padding: 20px 15px;
+    background: linear-gradient(45deg, var(--green), var(--dgreen));
+    border-radius: 8px;
+    box-shadow: .1em .1em 1em rgba(0, 0, 0, .2);
+    position: relative;
+}
+
+.main .counterSection .counterMain .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 200px;
+    width: 100%;
+    color: var(--black);
+    gap: 3px;
+    padding: 5px;
+    text-align: center;
+}
+
+.main .counterSection .counterMain .counter h1 {
+    font-size: 2.5em;
+}
+
+.main .counterSection .counterMain .counter p {
+    font-size: 1.05em;
+    font-weight: 500;
+}
+
+/* --- counter section end --- */
+
+/* --- services section start --- */
+.services {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.servicesTxt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.servicesTxt h3 {
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 120%;
+}
+
+.servicesTxt h3 span {
+    color: var(--blue);
+}
+
+.serviceBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.serviceItem {
+    background-color: var(--white);
+    border-radius: 2px;
+    padding: 8em 25px 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.serviceItem.serviceItemII {
+    background: var(--blue);
+}
+
+.serviceItem.serviceItemII .serviceIcon i {
+    color: var(--white);
+}
+
+.serviceItem.serviceItemII:hover .serviceIcon {
+    padding: 10px 0;
+}
+
+.serviceItemII .service-heading a span {
+    transform: rotate(-45deg);
+}
+
+.serviceItem a {
+    text-decoration: none;
+}
+
+.serviceItem::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background: var(--blue);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .3s linear;
+}
+
+.serviceItem:nth-child(1)::before {
+    background: url(img/services/web-development-web-solutions.png) 100% 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.serviceItem:nth-child(2)::before {
+    background: url(img/services/grahic-design-web-solutions.png) 100% 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.serviceItem:nth-child(3)::before {
+    background: url(img/services/video-editing-web-solutions.png) 100% 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.serviceItem:nth-child(4)::before {
+    background: url(img/services/seo-web-solutions.png) 100% 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.serviceItem:nth-child(5)::before {
+    background: url(img/services/smm-web-solutions.png) 100% 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.serviceItem:nth-child(6)::before {
+    background: url(img/services/website-maintenence-web-solutions.png) 100% 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.serviceItem:hover::before {
+    height: 100%;
+}
+
+.serviceItem .serviceIcon {
+    padding: 10px 0;
+    font-size: 2.5em;
+    transition: .3s linear;
+}
+
+.serviceItem .serviceIcon i {
+    color: var(--blue);
+    transition: .3s linear;
+}
+
+.serviceItem:hover .serviceIcon {
+    padding: 20px;
+}
+
+.serviceItem:hover .serviceIcon i {
+    color: var(--white);
+}
+
+.serviceItem .service-heading {
+    font-size: 1.5em;
+    color: var(--blue);
+}
+
+.serviceItem:hover .service-heading {
+    color: var(--white);
+}
+
+.serviceItem .service-description {
+    font-size: 0.95em;
+    color: var(--lblack);
+    transition: .3s linear;
+}
+
+.serviceItem:hover .service-description {
+    color: var(--white);
+}
+
+/* --- services section end --- */
+
+/* --- about us section start --- */
+.aboutSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em 0;
+}
+
+.aboutSection figure.scrollAni {
+    width: 100%;
+    height: 35vh;
+    background-image: url('img/about-web-soltution.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 10px;
+}
+
+
+.aboutSection .aboutTxt {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.aboutSection .aboutTxt h3 {
+    flex: 1 1 350px;
+    width: 100%;
+    font-size: 2.2em;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+.aboutSection .aboutTxt p {
+    flex: 1 1 350px;
+    width: 100%;
+    font-size: .90em;
+    color: var(--lblack);
+}
+
+/* --- about us section end --- */
+/* --- why section start --- */
+.whyUsSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 3em 0;
+}
+
+.whyUsSection .txtWhy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.whyUsSection .txtWhy h3 {
+    font-size: 2.5em;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+.whyUsSection .txtWhy p {
+    color: var(--lblack);
+    font-size: 0.98em;
+    max-width: 80%;
+    width: 100%;
+}
+
+.whyUsSection .detailsWhy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 2.5em 0;
+}
+
+.whyUsSection .detailsWhy figure {
+    flex: 1 1 300px;
+    width: 100%;
+    position: relative;
+}
+
+.whyUsSection .detailsWhy figure .whyCircle {
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.subCircle {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subCircle .whyTxtC {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: anim 10s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.subCircle .whyTxtC span {
+    position: absolute;
+    left: 50%;
+    font-size: .98em;
+    transform-origin: 0 130px;
+}
+
+.whyUsSection .detailsWhy figure img {
+    max-width: 33em;
+    width: 100%;
+    z-index: 10;
+    animation: whyImage 5s linear infinite;
+}
+
+@keyframes whyImage {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(1%) translateY(1%);
+    }
+
+    75% {
+        transform: translateX(-1%) translateY(-1%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
+}
+
+.whyUsSection .detailsWhy .boxesWhy {
+    flex: 1 1 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.whyUsSection .detailsWhy .boxesWhy .boxWhy {
+    flex: 1 1 190px;
+    width: 100%;
+    padding: 15px;
+    background: #6161610a;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.whyUsSection .detailsWhy .boxesWhy .boxWhy h3 {
+    font-size: 1.5em;
+    color: var(--blue);
+}
+
+
+.whyUsSection .detailsWhy .boxesWhy .boxWhy p {
+    font-size: .93em;
+    color: var(--lblack);
+}
+
+/* --- why section end --- */
+/* --- portfolio section start --- */
+.portfolioSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0 3em;
+    width: 100%;
+    transition: .3s linear;
+}
+
+.portfolioSection .topPortfolio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolioSection .topPortfolio .tab-heading {
+    flex: 1 1 200px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.portfolioSection .topPortfolio .tab-heading h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: var(--blue);
+}
+
+.portfolioSection .topPortfolio .filter-container {
+    flex: 1 1 270px;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolioSection .topPortfolio .tabs {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.portfolioSection .topPortfolio .tabs .tab-button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #dddddd;
+    color: var(--black);
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s linear;
+}
+
+.portfolioSection .topPortfolio .tabs .tab-button.active {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.portfolioSection .portfolio-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.portfolioSection .portfolio-items .item {
+    padding: 15px;
+    flex: 1 1 250px;
+    max-width: 250px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #61616112;
+    display: none;
+    position: relative;
+    opacity: 0;
+    transition: .3s;
+}
+
+.portfolioSection .portfolio-items .item.show {
+    display: block;
+    animation: popUp 0.5s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.portfolioSection .portfolio-items .item a {
+    text-decoration: none;
+}
+
+.portfolioSection .portfolio-items .item img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: .3s;
+}
+
+.portfolioSection .portfolio-items .item:hover img {
+    transform: scale(1.2);
+    opacity: .5;
+}
+
+.portfolioSection .portfolio-items .item span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 8px 15px;
+    font-size: .90em;
+    background: var(--lblue);
+    color: #fff;
+}
+
+#loadMoreBtn {
+    display: block;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 3px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    text-align: center;
+}
+
+#loadMoreBtn:hover {
+    background: var(--orange);
+}
+
+#loadMoreBtn:disabled {
+    background: var(--orange);
+    cursor: not-allowed;
+}
+/* --- portfolio section start --- */
+
+/* testimonail section start */
+/* testimonail section end */
+
+/* --- contact section start --- */
+.contactSection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.contact-details,
+.contact-form-section {
+    flex: 1 1 300px;
+    width: 100%;
+}
+
+.contact-details h2,
+.contact-form-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--blue);
+}
+
+.contact-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 15px;
+    color: var(--blue);
+}
+
+.info-text p {
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--blue);
+    outline: none;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* --- contact section end --- */
+/* --- main container end --- */
+
+/* --- footer section start --- */
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 4em 5.5em 2.5em;
+    background: #000e18;
+}
+
+.footer .footerContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer .footerContainer .footerSection {
+    flex: 1 1 250px;
+    width: 100%;
+}
+
+.footer .footerContainer .logoSocial {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer .footerContainer .logoSocial img {
+    max-width: 320px;
+    width: 100%;
+}
+
+.footer .footerContainer .logoSocial p {
+    color: var(--elblack);
+    font-weight: 300;
+    font-size: .90em;
+}
+
+.footer .footerContainer .logoSocial p.social {
+    color: var(--lblue);
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.footer .footerContainer .logoSocial .socialLinks {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer .footerContainer .logoSocial .socialLinks a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: var(--elblack);
+}
+
+.footer .footerContainer .listFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.footer .footerContainer .listFooter h4 {
+    font-size: 1.4em;
+    color: var(--lblue);
+}
+
+.footer .footerContainer .listFooter ul {
+    padding: 10px 0;
+}
+
+.footer .footerContainer .listFooter ul li {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .footerContainer .listFooter ul li a {
+    text-decoration: none;
+    color: var(--elblack);
+    padding: 5px 0;
+    transition: .3s ease-in-out;
+}
+
+.footer .footerContainer .listFooter ul li a:hover {
+    color: var(--lblack);
+}
+
+.footer .footerContainer .contactF {
+    color: var(--elblack);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .footerContainer .contactF h4 {
+    padding: 0 0 8px;
+    font-size: 1.4em;
+    color: var(--lblue);
+}
+
+.footer .footerContainer .contactF i {
+    color: var(--lblue);
+    font-size: 1.2em;
+}
+
+.footer .footerContainer .contactF p {
+    font-size: .95em;
+}
+
+.footer .footerBottom {
+    padding: 1em 0 0;
+    position: relative;
+    width: 100%;
+}
+
+.footer .footerBottom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 1px;
+    background: var(--lblue);
+}
+
+.footer .footerBottom p {
+    color: var(--elblack);
+    font-size: .97em;
+    text-align: center;
+}
+
+/* --- footer section end --- */
+
+/* responsive break down start */
+@media screen and (max-width: 1064px) {
+    .main .heroSection {
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .header {
+        padding: 20px 4em;
+    }
+
+    .main {
+        padding: 0 4em;
+    }
+}
+
+@media screen and (max-width: 1019px) {
+    .header .navigationBar>a {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 951px) {
+    .serviceBox {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .serviceBox .serviceItem {
+        flex: 1 1 230px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        padding: 1em 0;
+    }
+
+    .services .servicesTxt {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .services .servicesTxt h3 {
+        font-size: 2rem;
+    }
+
+    .services .serviceBox {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .services .serviceItem {
+        padding: 5em 10px 10px;
+    }
+
+    .footer .footerContainer {
+        gap: 25px;
+    }
+
+    .footer .footerContainer .listFooter {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 905px) {
+    .portfolioSection .portfolio-items .item {
+        flex: 1 1 240px;
+        max-width: 240px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .header .navigationBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--elblack);
+        transform: translateX(-100%);
+        z-index: 999;
+    }
+
+    .header .navigationBar ul {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .header .navigationBar ul li a:hover::before {
+        opacity: 0;
+    }
+
+    .header .navigationBar ul li a:hover {
+        font-weight: 900;
+    }
+
+    .header .navigationBar ul li a {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: var(--black);
+        text-transform: uppercase;
+    }
+
+    .header .humberger {
+        display: flex;
+        z-index: 99999;
+    }
+
+    .header.active .navigationBar {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .header {
+        padding: 10px 1.5em;
+    }
+
+    .main {
+        padding: 0 1.5em;
+    }
+
+    .footer {
+        padding: 2em 1.5em;
+    }
+
+    .main .heroSection {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main .heroSection {
+        height: 50vh;
+    }
+
+    .main .counterSection .counterMain {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main .counterSection .counterMain {
+        width: 99%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .tab-heading {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .filter-container {
+        margin-top: 20px;
+    }
+
+    .item {
+        width: calc(50% - 20px);
+        /* Adjust for spacing */
+    }
+}
+
+@media screen and (max-width: 529px) {
+    .main {
+        padding: 0 1em;
+    }
+
+    .header {
+        padding: 1.2em 1em;
+    }
+
+    .header figure {
+        max-width: 210px;
+    }
+
+    .main .heroSection {
+        height: 75vh;
+    }
+
+    .footer {
+        padding: 2em 1em;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .portfolioSection .topPortfolio .tabs {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .servicesTxt h3 {
+        font-size: 1.5rem;
+    }
+
+    .serviceItem {
+        padding: 3em 10px 15px;
+    }
+
+    .whyUsSection {
+        padding: .1em;
+    }
+
+    .whyUsSection .txtWhy h3 {
+        font-size: 2.2em;
+        line-height: 140%;
+    }
+
+    .whyUsSection .txtWhy p {
+        max-width: 100%;
+    }
+
+    .whyUsSection .detailsWhy .boxesWhy .boxWhy {
+        gap: 5px;
+    }
+
+    .item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .portfolioSection .portfolio-items .item {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    body {
+        font-size: 90%;
+    }
+}
+
+/* responsive break down end */
