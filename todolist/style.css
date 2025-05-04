@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+ 
+/* body section */
+body {
+    background: url(img/bg-of-todo.jpg) 100% 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 95vh;
+}
+/* ------- */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.header .header-left {
+    width: 250px;
+}
+
+.header .header-left .imgTodo {
+    width: 100%;
+}
+
+/* main container */
+.containerMain {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+}
+
+.todoForm {
+    max-width: 600px;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.todoForm h3 {
+    padding: 15px;
+    font-size: 35px;
+    background: #A555EC;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin: 0 0 25px;
+}
+
+.todoForm .containerInput {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+}
+
+.todoForm .containerInput #title,
+.todoForm .containerInput #desc {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.todoForm .containerInput #title::target-text,
+.todoForm .containerInput #desc::target-text {
+    color: #ccc;
+}
+
+.todoForm #addTodo,
+.todoForm #deleteTodo {
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    background: #A555EC;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 20px 0;
+}
+
+.todoForm #addTodo::before,
+.todoForm #deleteTodo::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #000;
+    top: 0; left: 0;
+    transition: .3s;
+    z-index: -1;
+}
+
+
+.todoForm #addTodo:hover::before,
+.todoForm #deleteTodo:hover::before {
+    width: 100%;
+}
+
+#renderList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+    flex-direction: column;
+}
+
+#renderList .listItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+#renderList .listItem h3 {
+    font-size: 22px;
+    text-transform: capitalize;
+    color: rgb(116, 114, 114);
+}
+
+#renderList .listItem button {
+    padding: 0px;
+    font-size: 25px;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(248, 0, 0, 0.8);
+}

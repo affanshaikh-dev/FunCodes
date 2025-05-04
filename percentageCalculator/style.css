@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rowdies:wght@300;400;700&display=swap');
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    background: rgb(252, 240, 225);
+}
+
+/* main container start */
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 5px;
+}
+
+.main_container .main_percent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.main_container .main_percent .percentageForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.main_container .main_percent .percentageForm h3 {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    background: antiquewhite;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 900;
+    color: rgb(112, 69, 13);
+    font-size: 1.2em;
+}
+
+.main_container .main_percent .percentageForm .inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.main_container .main_percent .percentageForm .inputs input{
+    flex: 1 1 180px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: rgba(112, 69, 13, 0.048);
+    color: rgb(112, 69, 13);
+}
+
+.main_container .main_percent .percentageForm .inputs input::placeholder {
+    color: rgb(112, 69, 13);
+}
+
+.main_container .main_percent .percentageForm .percentBtn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: rgb(112, 69, 13);
+    color: antiquewhite;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.main_container .main_percent .percentageForm .percentBtn::before {
+    content: "";
+    position: absolute;
+    width: 0%; height: 100%;
+    z-index: -1;
+    background: antiquewhite;
+    top: 0; left: 0;
+    transition: .3s linear;
+}
+
+.main_container .main_percent .percentageForm .percentBtn:hover::before {
+    width: 100%;
+}
+
+.main_container .main_percent .percentageForm .percentBtn:hover {
+    color: rgb(112, 69, 13);
+}
+
+.main_container .main_percent .percentOutput {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(112, 69, 13, 0.048);
+    width: 100%;
+    padding: 20px;
+    display: none;
+}
+
+.main_container .main_percent .percentOutput .outputBox {
+    font-size: 3em;
+    font-weight: 900;
+    color: rgb(112, 69, 13);
+}
+
+.main_container .main_percent .percentOutput span {
+    transform: translateY(-10px);
+    color: rgb(112, 69, 13);
+    font-weight: 500;
+}
+
+/* main container end */

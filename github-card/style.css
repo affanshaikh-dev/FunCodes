@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: #121212;
+}
+
+.container {
+    border: 1px solid rgba(58, 58, 58, 0.2);
+    background: rgba(255, 255, 255, 0.123);
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.container .profileImage {
+    max-width: 200px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.container .profileImage img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.container .details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .details .pName {
+    padding: 5px 0 10px;
+    color: #fff;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.container .details .subDetail {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.container .details .subDetail p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.container .details .connect {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.02em;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    background: rgb(6, 88, 196);
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+} 
+
+.container .details .connect i {
+    font-weight: 400;
+}
+
+.container .details .connect:hover {
+    background: rgb(31, 108, 209);
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Fredoka:wght@300;400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Overpass:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Questrial&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Readex+Pro:wght@200;300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Titillium+Web:wght@200;300;400;600;700;900&family=Viga&family=Work+Sans:wght@200;300;400;500;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(2, 2, 50);
+    width: 100%;
+    height: 100vh;
+}
+
+.container-joke-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.random-joke-title {
+    font-size: 50px;
+    font-weight: 800;
+    color: rgb(2, 2, 50);
+    padding: 20px 0;
+    background: #fff;
+    width: 100%;
+}
+
+.random-jokes,
+.random-jokes-render {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px 100px;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+
+
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button .btn-info {
+    padding: 10px;
+    border: none;
+    color: rgb(2, 2, 50)s;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    margin: 35px 0;
+    position: absolute;
+    bottom: 0;
+    transition: .4s;
+}
+
+.button .btn-info:hover {
+    color: #fff;
+    background: rgb(2, 2, 50);
+    transform: scale(1.1);
+}
+
+.container-emoji {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.container-emoji img {
+    width: 15%;
+    position: absolute;
+    left: 30px;
+    top: 30ch;
+}
+
+
+.container-emoji-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.container-emoji-2 img {
+    width: 15%;
+    position: absolute;
+    right: 30px;
+    top: 30ch;
+}
+
+@media screen and (max-width: 991px) {
+    .random-jokes,
+.random-jokes-render {
+    font-size: 18px;
+}
+
+.random-joke-title {
+    font-size: 30px;
+}
+}
