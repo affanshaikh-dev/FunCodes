@@ -1,0 +1,173 @@
+/* about us sectoin start */
+.aboutContainer {
+    width: 100%;
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+    gap: 3em;
+    padding: 3em 0;
+}
+
+.aboutContainer .aboutTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.aboutContainer .aboutTitle img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: .8em;
+}
+
+.aboutContainer .aboutTitle {
+    flex: 1;
+}
+
+.aboutContainer .descAbout {
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.aboutContainer .descAbout a {
+    text-decoration: none;
+    color: var(--dblack);
+    transition: .3s ease-in-out;
+}
+
+.aboutContainer .descAbout a i {
+    transition: .3s ease-in-out;
+}
+
+.aboutContainer .descAbout a:hover {
+    color: var(--secondary);
+}
+
+.aboutContainer .descAbout a:hover i {
+    padding: 0 .4em;
+}
+
+/* about us sectoin end */
+
+/* about us page start */
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.aboutHeader {
+    background: url(../../img/about-banner.jpg);
+}
+
+.aboutSection .aboutContent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+
+.aboutSection .aboutContent .aboutImage {
+    flex: 1 1 45%;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.aboutSection .aboutContent .aboutImage img {
+    border-radius: .8em;
+    width: 100%;
+}
+
+.aboutSection .aboutContent .aboutText {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+/* choose us container start */
+.whyChooseUs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: 1em 0;
+}
+
+.whyChooseUs .chooseHeader {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: .5em;
+}
+
+.whyChooseUs .chooseHeader h2 {
+    font-size: 2.5em;
+    color: var(--secondary);
+}
+
+.whyChooseUs .chooseHeader p {
+    max-width: 50%;
+}
+
+.whyChooseUs .chooseCards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 1.5em 0 2em;
+    flex-wrap: wrap;
+}
+
+.whyChooseUs .chooseCards .chooseCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1.7em 1.5em;
+    border: 1px solid var(--secondary);
+    border-radius: 1em;
+    background: var(--background);
+    transition: all .3s ease-in-out;
+    flex: 1 1 300px;
+}
+
+.whyChooseUs .chooseCards .chooseCard:hover {
+    transform: translateY(-1em);
+}
+
+.whyChooseUs .chooseCards .chooseCard .cardIcon {
+    padding: .6em;
+    font-size: 1.7em;
+    background: var(--secondary);
+    border-radius: 50%;
+    color: var(--background);
+}
+
+.whyChooseUs .chooseCards .chooseCard .cardIcon  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whyChooseUs .chooseCards .cardContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+}
+
+.whyChooseUs .chooseCards .cardContent h3 {
+    font-size: 1.7em;
+    color: var(--secondary);
+}
+/* choose us container end */
+/* about us page end */
